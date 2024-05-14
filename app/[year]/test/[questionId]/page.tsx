@@ -10,7 +10,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function TestPage({
+export default function QuestionPage({
   params,
 }: {
   params: { year: string; questionId: string };

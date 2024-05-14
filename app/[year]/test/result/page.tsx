@@ -66,7 +66,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
             สมัครเลย!
           </Link>
           <Link
-            href={`/${year.id}/test/1`}
+            href={`/${year.id}/test`}
             className="rounded-xl border-2 border-identity-cloud px-4 py-2 text-sm font-medium"
           >
             ทำแบบทดสอบอีกครั้ง
