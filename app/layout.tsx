@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { ibmPlexSansThai, manrope } from "./lib/font";
+import TestProvider from "./contexts/test-context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +14,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="th">
+      <head>
+        <meta
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+          name="viewport"
+        />
+      </head>
+      <body
+        className={`${manrope.variable} ${ibmPlexSansThai.variable} flex justify-center h-full bg-[url('/background.svg')] bg-[length:400px_400px]`}
+      >
+        <div className="flex flex-col w-full min-h-svh max-w-2xl px-4">
+          <TestProvider>{children}</TestProvider>
+        </div>
+      </body>
     </html>
   );
 }

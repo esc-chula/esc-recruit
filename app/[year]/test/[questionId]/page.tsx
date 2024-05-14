@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import Years from "@/data/years.json";
 import Questions from "@/data/questions.json";
+import BottomRightLogo from "@/components/bottom-right-logo";
+import Choices from "@/components/choices";
 
 export async function generateStaticParams() {
   return Questions.map((question) => ({
@@ -24,8 +26,14 @@ export default function TestPage({
   }
 
   return (
-    <div>
-      {params.year} {params.questionId}
-    </div>
+    <>
+      <div className="flex flex-col items-center h-full w-full justify-center space-y-10 pb-20">
+        <h1 className="font-bold text-2xl text-center">{question.question}</h1>
+        <div className="flex flex-col space-y-5 w-full">
+          <Choices question={question} />
+        </div>
+      </div>
+      <BottomRightLogo />
+    </>
   );
 }

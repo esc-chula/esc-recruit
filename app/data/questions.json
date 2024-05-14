@@ -1,10 +1,126 @@
 [
   {
     "id": 1,
-    "yearId": 67
+    "yearId": 67,
+    "question": "คุณคิดว่าคุณถนัดอะไรมากที่สุด?",
+    "choices": [
+      {
+        "id": 1,
+        "title": "this is title",
+        "department": "tech",
+        "weight": 1
+      },
+      {
+        "id": 2,
+        "title": "this is title",
+        "department": "ea",
+        "weight": 1
+      },
+      {
+        "id": 3,
+        "title": "this is title",
+        "department": "in",
+        "weight": 1
+      },
+      {
+        "id": 4,
+        "title": "this is title",
+        "department": "od",
+        "weight": 1
+      }
+    ]
   },
   {
     "id": 2,
-    "yearId": 67
+    "yearId": 67,
+    "question": "this is question",
+    "choices": [
+      {
+        "id": 1,
+        "title": "this is title",
+        "department": "tech",
+        "weight": 1
+      },
+      {
+        "id": 2,
+        "title": "this is title",
+        "department": "ea",
+        "weight": 1
+      },
+      {
+        "id": 3,
+        "title": "this is title",
+        "department": "in",
+        "weight": 1
+      },
+      {
+        "id": 4,
+        "title": "this is title",
+        "department": "od",
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "yearId": 67,
+    "question": "this is another question",
+    "choices": [
+      {
+        "id": 1,
+        "title": "this is title",
+        "department": "tech",
+        "weight": 1
+      },
+      {
+        "id": 2,
+        "title": "this is title",
+        "department": "ea",
+        "weight": 1
+      },
+      {
+        "id": 3,
+        "title": "this is title",
+        "department": "in",
+        "weight": 1
+      },
+      {
+        "id": 4,
+        "title": "this is title",
+        "department": "od",
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "yearId": 67,
+    "question": "this is another another question",
+    "choices": [
+      {
+        "id": 1,
+        "title": "this is title",
+        "department": "tech",
+        "weight": 1
+      },
+      {
+        "id": 2,
+        "title": "this is title",
+        "department": "ea",
+        "weight": 1
+      },
+      {
+        "id": 3,
+        "title": "this is title",
+        "department": "in",
+        "weight": 1
+      },
+      {
+        "id": 4,
+        "title": "this is title",
+        "department": "od",
+        "weight": 1
+      }
+    ]
   }
 ]
