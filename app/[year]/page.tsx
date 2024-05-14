@@ -41,7 +41,7 @@ export default function YearPage({ params }: { params: { year: string } }) {
       </div>
       <div className="grid text-center space-y-4">
         <Link
-          href="https://forms.gle/anBi6os4R1ZG123EA"
+          href={year.formUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="px-4 py-2 bg-identity-cloud text-identity-esc rounded-xl font-semibold text-xl"

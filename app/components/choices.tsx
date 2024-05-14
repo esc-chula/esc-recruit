@@ -5,10 +5,11 @@ import { Question } from "@/types/question";
 import { useRouter } from "next/navigation";
 import { FiChevronRight } from "react-icons/fi";
 import Questions from "@/data/questions.json";
+import Departments from "@/data/departments.json";
 
 export default function Choices({ question }: { question: Question }) {
   const router = useRouter();
-  const { addAnswer } = useTest();
+  const { addAnswer, summarizeAnswers } = useTest();
 
   return (
     <>
@@ -19,7 +20,24 @@ export default function Choices({ question }: { question: Question }) {
             addAnswer(choice);
 
             if (question.id === Questions.length) {
-              router.push(`/${question.yearId}/test/result`);
+              const result = summarizeAnswers();
+              if (!result || result.length === 0) {
+                router.push("/");
+                return null;
+              }
+
+              const departmentId = result[0][0];
+              const department = Departments.find(
+                (dep) => dep.id === departmentId
+              );
+              if (!department) {
+                router.push("/");
+                return null;
+              }
+
+              router.push(
+                `/${question.yearId}/test/result?department=${department.id}`
+              );
               return;
             }
 
