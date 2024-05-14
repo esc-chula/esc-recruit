@@ -6,7 +6,7 @@
     "choices": [
       {
         "id": 1,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1 }",
         "weight": {
           "tech": 2,
           "ea": 1
@@ -14,7 +14,7 @@
       },
       {
         "id": 2,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1, od: 3 }",
         "weight": {
           "tech": 2,
           "ea": 1,
@@ -23,7 +23,7 @@
       },
       {
         "id": 3,
-        "title": "this is title",
+        "title": "weight: { tech: 2, in: 1 }",
         "weight": {
           "tech": 2,
           "in": 1
@@ -31,7 +31,7 @@
       },
       {
         "id": 4,
-        "title": "this is title",
+        "title": "weight: { ea: 2, od: 1 }",
         "weight": {
           "ea": 2,
           "od": 1
@@ -42,11 +42,11 @@
   {
     "id": 2,
     "yearId": 67,
-    "question": "this is question",
+    "question": "คุณคิดว่าคุณเก่งอะไรมากที่สุด?",
     "choices": [
       {
         "id": 1,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1 }",
         "weight": {
           "tech": 2,
           "ea": 1
@@ -54,7 +54,7 @@
       },
       {
         "id": 2,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1, od: 3 }",
         "weight": {
           "tech": 2,
           "ea": 1,
@@ -63,7 +63,7 @@
       },
       {
         "id": 3,
-        "title": "this is title",
+        "title": "weight: { tech: 2, in: 1 }",
         "weight": {
           "tech": 2,
           "in": 1
@@ -71,7 +71,7 @@
       },
       {
         "id": 4,
-        "title": "this is title",
+        "title": "weight: { ea: 2, od: 1 }",
         "weight": {
           "ea": 2,
           "od": 1
@@ -82,11 +82,11 @@
   {
     "id": 3,
     "yearId": 67,
-    "question": "this is another question",
+    "question": "คุณคิดว่าคุณเทพอะไรมากที่สุด?",
     "choices": [
       {
         "id": 1,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1 }",
         "weight": {
           "tech": 2,
           "ea": 1
@@ -94,7 +94,7 @@
       },
       {
         "id": 2,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1, od: 3 }",
         "weight": {
           "tech": 2,
           "ea": 1,
@@ -103,7 +103,7 @@
       },
       {
         "id": 3,
-        "title": "this is title",
+        "title": "weight: { tech: 2, in: 1 }",
         "weight": {
           "tech": 2,
           "in": 1
@@ -111,7 +111,7 @@
       },
       {
         "id": 4,
-        "title": "this is title",
+        "title": "weight: { ea: 2, od: 1 }",
         "weight": {
           "ea": 2,
           "od": 1
@@ -122,11 +122,11 @@
   {
     "id": 4,
     "yearId": 67,
-    "question": "this is another another question",
+    "question": "คุณคิดว่าคุณมึนอะไรมากที่สุด?",
     "choices": [
       {
         "id": 1,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1 }",
         "weight": {
           "tech": 2,
           "ea": 1
@@ -134,7 +134,7 @@
       },
       {
         "id": 2,
-        "title": "this is title",
+        "title": "weight: { tech: 2, ea: 1, od: 3 }",
         "weight": {
           "tech": 2,
           "ea": 1,
@@ -143,7 +143,7 @@
       },
       {
         "id": 3,
-        "title": "this is title",
+        "title": "weight: { tech: 2, in: 1 }",
         "weight": {
           "tech": 2,
           "in": 1
@@ -151,7 +151,7 @@
       },
       {
         "id": 4,
-        "title": "this is title",
+        "title": "weight: { ea: 2, od: 1 }",
         "weight": {
           "ea": 2,
           "od": 1
