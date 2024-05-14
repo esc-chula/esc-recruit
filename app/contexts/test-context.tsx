@@ -7,13 +7,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 interface TestContextType {
   addAnswer: (answer: Choice) => void;
   removeAnswerAtIdx: (idx: number) => void;
-  summarizeAnswers: () => [string, number] | undefined;
+  summarizeAnswers: () => [string, number][];
 }
 
 export const TestContext = createContext<TestContextType>({
   addAnswer: () => {},
   removeAnswerAtIdx: () => {},
-  summarizeAnswers: () => undefined,
+  summarizeAnswers: () => [],
 });
 
 export default function TestProvider({
@@ -34,22 +34,19 @@ export default function TestProvider({
   };
 
   const summarizeAnswers = () => {
-    const departmentMap = answers.reduce((acc, answer) => {
-      if (acc[answer.department]) {
-        acc[answer.department] += answer.weight;
-      } else {
-        acc[answer.department] = answer.weight;
+    const summary = {} as Record<string, number>;
+
+    answers.forEach((answer) => {
+      const { department, weight } = answer;
+
+      if (!summary[department]) {
+        summary[department] = 0;
       }
 
-      return acc;
-    }, {} as Record<string, number>);
+      summary[department] += weight;
+    });
 
-    const maxWeight = Math.max(...Object.values(departmentMap));
-    const department = Object.entries(departmentMap).find(
-      ([, weight]) => weight === maxWeight
-    );
-
-    return department;
+    return Object.entries(summary).sort((a, b) => b[1] - a[1]);
   };
 
   useEffect(() => {

@@ -9,21 +9,17 @@ export default function TestResult() {
   const { summarizeAnswers } = useTest();
 
   const result = summarizeAnswers();
-
-  if (!result) {
+  if (!result || result.length === 0) {
     router.push("/");
     return null;
   }
 
-  const [resultDepartment, _] = result;
-  const department = Departments.find(
-    (department) => department.id === resultDepartment
-  );
-
+  const departmentId = result[0][0];
+  const department = Departments.find((dep) => dep.id === departmentId);
   if (!department) {
     router.push("/");
     return null;
   }
 
-  return <h1 className="text-4xl font-bold">{department?.name.th}!</h1>;
+  return <h1 className="text-4xl font-bold">{department.name.th}!</h1>;
 }
