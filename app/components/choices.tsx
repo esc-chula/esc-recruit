@@ -19,7 +19,7 @@ export default function Choices({ question }: { question: Question }) {
             addAnswer(choice);
 
             if (question.id === Questions.length) {
-              router.push(`/${question.yearId}/result`);
+              router.push(`/${question.yearId}/test/result`);
               return;
             }
 

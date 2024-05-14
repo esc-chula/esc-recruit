@@ -7,11 +7,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 interface TestContextType {
   addAnswer: (answer: Choice) => void;
   removeAnswerAtIdx: (idx: number) => void;
+  summarizeAnswers: () => [string, number] | undefined;
 }
 
 export const TestContext = createContext<TestContextType>({
   addAnswer: () => {},
   removeAnswerAtIdx: () => {},
+  summarizeAnswers: () => undefined,
 });
 
 export default function TestProvider({
@@ -53,7 +55,7 @@ export default function TestProvider({
   useEffect(() => {
     const questionId = pathname.split("/").pop();
 
-    if (questionId) {
+    if (questionId && !isNaN(parseInt(questionId))) {
       const idx = parseInt(questionId) - 1;
       setAnswers((prev) => prev.slice(0, idx));
     }
@@ -64,6 +66,7 @@ export default function TestProvider({
       value={{
         addAnswer,
         removeAnswerAtIdx,
+        summarizeAnswers,
       }}
     >
       {children}

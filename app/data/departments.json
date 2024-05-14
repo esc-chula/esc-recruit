@@ -1,6 +1,9 @@
 [
   {
     "id": "tech",
-    "name": "Tech"
+    "name": {
+      "en": "Technology",
+      "th": "เทคโนโลยี"
+    }
   }
 ]
