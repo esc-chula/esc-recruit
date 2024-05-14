@@ -1,13 +1,12 @@
 "use client";
 
-import { notFound } from "next/navigation";
-import Years from "@/data/years.json";
-import { useTest } from "@/contexts/test-context";
-import { useRouter } from "next/navigation";
-import Departments from "@/data/departments.json";
 import BottomRightLogo from "@/components/bottom-right-logo";
+import { useTest } from "@/contexts/test-context";
+import Departments from "@/data/departments.json";
+import Years from "@/data/years.json";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound, useRouter } from "next/navigation";
 
 export default function ResultPage({ params }: { params: { year: string } }) {
   const router = useRouter();
@@ -33,7 +32,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
 
   return (
     <>
-      <div className="flex flex-col w-full h-full items-center justify-center space-y-4">
+      <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
         <Image
           src={`/${department.id}.png`}
           width={96}
@@ -41,7 +40,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
           alt={department.name}
           className="select-none"
         />
-        <div className="text-center space-y-1">
+        <div className="space-y-1 text-center">
           <p className="text-lg">คุณเหมาะกับฝ่าย</p>
           <h1 className="text-4xl font-bold">{department.name}!</h1>
         </div>
@@ -57,18 +56,18 @@ export default function ResultPage({ params }: { params: { year: string } }) {
               .join(", ")}
           </p>
         </div>
-        <div className="grid text-center space-y-4 pt-10">
+        <div className="grid space-y-4 pt-10 text-center">
           <Link
             href={year.formUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-4 py-2 bg-identity-cloud text-identity-esc rounded-xl font-semibold text-xl"
+            className="rounded-xl bg-identity-cloud px-4 py-2 text-xl font-semibold text-identity-esc"
           >
             สมัครเลย!
           </Link>
           <Link
             href={`/${year.id}/test/1`}
-            className="px-4 py-2 border-2 border-identity-cloud rounded-xl font-medium text-sm"
+            className="rounded-xl border-2 border-identity-cloud px-4 py-2 text-sm font-medium"
           >
             ทำแบบทดสอบอีกครั้ง
           </Link>

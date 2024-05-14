@@ -1,9 +1,9 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Years from "@/data/years.json";
-import { useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
@@ -17,13 +17,13 @@ export default function Home() {
   }, [activeYears, router]);
 
   return (
-    <div className="flex flex-col items-center h-full w-full justify-center">
+    <div className="flex h-full w-full flex-col items-center justify-center">
       <Image
         src="/logo.svg"
         width={64}
         height={64}
         alt={"esc logo"}
-        className="select-none animate-pulse duration-0"
+        className="animate-pulse select-none duration-0"
       />
     </div>
   );

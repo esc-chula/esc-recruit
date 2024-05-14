@@ -7,7 +7,7 @@ export default function BottomRightLogo() {
       width={24}
       height={24}
       alt={"esc logo"}
-      className="absolute right-6 bottom-6 select-none"
+      className="absolute bottom-6 right-6 select-none"
     />
   );
 }

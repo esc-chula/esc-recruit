@@ -1,7 +1,7 @@
-import { notFound } from "next/navigation";
 import Years from "@/data/years.json";
 import Image from "next/image";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return Years.map((year) => ({
@@ -17,7 +17,7 @@ export default function YearPage({ params }: { params: { year: string } }) {
   }
 
   return (
-    <div className="flex flex-col items-center h-full w-full justify-center space-y-16">
+    <div className="flex h-full w-full flex-col items-center justify-center space-y-16">
       <div className="flex flex-col items-center space-y-6">
         <Image
           src="/logo.svg"
@@ -26,7 +26,7 @@ export default function YearPage({ params }: { params: { year: string } }) {
           alt={"esc logo"}
           className="select-none"
         />
-        <div className="text-center space-y-4">
+        <div className="space-y-4 text-center">
           <h1 className="font-bold leading-8">
             <span className="text-3xl">We’re Recruiting!</span>
             <br />
@@ -39,18 +39,18 @@ export default function YearPage({ params }: { params: { year: string } }) {
           </p>
         </div>
       </div>
-      <div className="grid text-center space-y-4">
+      <div className="grid space-y-4 text-center">
         <Link
           href={year.formUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-4 py-2 bg-identity-cloud text-identity-esc rounded-xl font-semibold text-xl"
+          className="rounded-xl bg-identity-cloud px-4 py-2 text-xl font-semibold text-identity-esc"
         >
           ฟอร์มรับสมัคร
         </Link>
         <Link
           href={`/${year.id}/test/1`}
-          className="px-4 py-2 border-2 border-identity-cloud rounded-xl font-medium text-sm"
+          className="rounded-xl border-2 border-identity-cloud px-4 py-2 text-sm font-medium"
         >
           เราเหมาะกับฝ่ายไหนใน กวศ. กันนะ?
         </Link>
