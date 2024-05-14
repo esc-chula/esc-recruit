@@ -9,6 +9,7 @@ export default function TestResult() {
   const { summarizeAnswers } = useTest();
 
   const result = summarizeAnswers();
+
   if (!result || result.length === 0) {
     router.push("/");
     return null;
@@ -21,5 +22,5 @@ export default function TestResult() {
     return null;
   }
 
-  return <h1 className="text-4xl font-bold">{department.name.th}!</h1>;
+  return <h1 className="text-4xl font-bold">{department.name}!</h1>;
 }

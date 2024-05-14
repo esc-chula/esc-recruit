@@ -1,8 +1,7 @@
 export interface Choice {
   id: number;
   title: string;
-  department: string;
-  weight: number;
+  weight: any;
 }
 
 export interface Question {

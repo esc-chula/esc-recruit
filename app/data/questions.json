@@ -7,26 +7,35 @@
       {
         "id": 1,
         "title": "this is title",
-        "department": "tech",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1
+        }
       },
       {
         "id": 2,
         "title": "this is title",
-        "department": "ea",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1,
+          "od": 3
+        }
       },
       {
         "id": 3,
         "title": "this is title",
-        "department": "in",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "in": 1
+        }
       },
       {
         "id": 4,
         "title": "this is title",
-        "department": "od",
-        "weight": 1
+        "weight": {
+          "ea": 2,
+          "od": 1
+        }
       }
     ]
   },
@@ -38,26 +47,35 @@
       {
         "id": 1,
         "title": "this is title",
-        "department": "tech",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1
+        }
       },
       {
         "id": 2,
         "title": "this is title",
-        "department": "ea",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1,
+          "od": 3
+        }
       },
       {
         "id": 3,
         "title": "this is title",
-        "department": "in",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "in": 1
+        }
       },
       {
         "id": 4,
         "title": "this is title",
-        "department": "od",
-        "weight": 1
+        "weight": {
+          "ea": 2,
+          "od": 1
+        }
       }
     ]
   },
@@ -69,26 +87,35 @@
       {
         "id": 1,
         "title": "this is title",
-        "department": "tech",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1
+        }
       },
       {
         "id": 2,
         "title": "this is title",
-        "department": "ea",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1,
+          "od": 3
+        }
       },
       {
         "id": 3,
         "title": "this is title",
-        "department": "in",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "in": 1
+        }
       },
       {
         "id": 4,
         "title": "this is title",
-        "department": "od",
-        "weight": 1
+        "weight": {
+          "ea": 2,
+          "od": 1
+        }
       }
     ]
   },
@@ -100,26 +127,35 @@
       {
         "id": 1,
         "title": "this is title",
-        "department": "tech",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1
+        }
       },
       {
         "id": 2,
         "title": "this is title",
-        "department": "ea",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "ea": 1,
+          "od": 3
+        }
       },
       {
         "id": 3,
         "title": "this is title",
-        "department": "in",
-        "weight": 1
+        "weight": {
+          "tech": 2,
+          "in": 1
+        }
       },
       {
         "id": 4,
         "title": "this is title",
-        "department": "od",
-        "weight": 1
+        "weight": {
+          "ea": 2,
+          "od": 1
+        }
       }
     ]
   }

@@ -37,13 +37,13 @@ export default function TestProvider({
     const summary = {} as Record<string, number>;
 
     answers.forEach((answer) => {
-      const { department, weight } = answer;
+      Object.entries(answer.weight).forEach(([key, value]) => {
+        if (!summary[key]) {
+          summary[key] = 0;
+        }
 
-      if (!summary[department]) {
-        summary[department] = 0;
-      }
-
-      summary[department] += weight;
+        summary[key] += value as number;
+      });
     });
 
     return Object.entries(summary).sort((a, b) => b[1] - a[1]);
