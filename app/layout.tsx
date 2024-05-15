@@ -7,6 +7,7 @@ import { ibmPlexSansThai, manrope } from "./lib/font";
 export const metadata: Metadata = {
   title: "ESC Recruitment",
   description: "รับสมัครเพื่อนร่วมทีม กวศ.",
+  metadataBase: new URL("https://apply.intania.org")
 };
 
 export default function RootLayout({
