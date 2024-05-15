@@ -22,9 +22,9 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${manrope.variable} ${ibmPlexSansThai.variable} flex h-full justify-center bg-[url('/background.svg')] bg-[length:400px_400px] bg-center`}
+        className={`${manrope.variable} ${ibmPlexSansThai.variable} flex h-full justify-center bg-[url('/background.svg')] bg-[length:400px_400px] bg-center px-4`}
       >
-        <div className="flex min-h-svh w-full max-w-2xl flex-col px-4">
+        <div className="flex min-h-svh w-full max-w-2xl flex-col">
           <TestProvider>{children}</TestProvider>
         </div>
       </body>
