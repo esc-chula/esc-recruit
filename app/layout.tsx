@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import TestProvider from "./contexts/test-context";
 import "./globals.css";
@@ -21,6 +22,7 @@ export default function RootLayout({
           name="viewport"
         />
       </head>
+      <GoogleAnalytics gaId="G-MS6WZH6337" />
       <body
         className={`${manrope.variable} ${ibmPlexSansThai.variable} flex h-full justify-center bg-[url('/background.svg')] bg-[length:400px_400px] bg-center px-4`}
       >
