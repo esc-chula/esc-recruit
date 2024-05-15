@@ -7,6 +7,7 @@ import Years from "@/data/years.json";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
+import { FiArrowUpRight } from "react-icons/fi";
 
 export default function ResultPage({ params }: { params: { year: string } }) {
   const router = useRouter();
@@ -40,9 +41,20 @@ export default function ResultPage({ params }: { params: { year: string } }) {
           alt={department.name}
           className="select-none"
         />
-        <div className="space-y-1 text-center">
+        <div className="flex flex-col items-center space-y-1 text-center">
           <p className="text-lg">คุณเหมาะกับฝ่าย</p>
           <h1 className="text-4xl font-bold">{department.name}!</h1>
+          <div className="pt-2">
+            <Link
+              href={department.postUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex w-max items-center space-x-1 rounded-lg bg-white px-3 py-1.5 text-xs font-medium text-identity-carbon"
+            >
+              <span>ข้อมูลเพิ่มเติม</span>
+              <FiArrowUpRight />
+            </Link>
+          </div>
         </div>
         <div className="text-center">
           <p className="text-xs">และรองลงมาเป็นฝ่าย</p>

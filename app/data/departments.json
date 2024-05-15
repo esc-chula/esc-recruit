@@ -1,38 +1,47 @@
 [
   {
     "id": "tech",
-    "name": "เทคโนโลยี"
+    "name": "เทคโนโลยี",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "sec",
-    "name": "เลขานุการ"
+    "name": "เลขานุการ",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "fin",
-    "name": "การเงิน"
+    "name": "การเงิน",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "marcom",
-    "name": "ประชาสัมพันธ์และการตลาด"
+    "name": "ประชาสัมพันธ์และการตลาด",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "od",
-    "name": "พัฒนาองค์กร"
+    "name": "พัฒนาองค์กร",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ea",
-    "name": "กิจการภายนอก"
+    "name": "กิจการภายนอก",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "in",
-    "name": "กิจการภายใน"
+    "name": "กิจการภายใน",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ns3k",
-    "name": "นิสิตสัมพันธ์"
+    "name": "นิสิตสัมพันธ์",
+    "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ac",
-    "name": "วิชาการ"
+    "name": "วิชาการ",
+    "postUrl": "https://www.instagram.com/escchula/"
   }
 ]
