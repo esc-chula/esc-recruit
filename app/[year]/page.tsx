@@ -33,7 +33,7 @@ export default function YearPage({ params }: { params: { year: string } }) {
             <span className="text-2xl">รับสมัครเพื่อนร่วมทีม กวศ.67</span>
           </h1>
           <p className="text-sm">
-            ตั้งแต่วันนี้ - 20 พฤษภาคม 2567
+            ตั้งแต่วันนี้ - 22 พฤษภาคม 2567
             <br />
             โดยจะมีการสัมภาษณ์ตั้งแต่วันที่ 27-31 พฤษภาคม 2567
           </p>
