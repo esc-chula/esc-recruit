@@ -36,7 +36,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
     <>
       <div className="flex h-full w-full flex-col items-center justify-center space-y-4">
         <Image
-          src={`/${department.id}.png`}
+          src={`/${department.id.split("-")[0]}.png`}
           width={96}
           height={96}
           alt={department.name}
