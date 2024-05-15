@@ -1,5 +1,6 @@
 "use client";
 
+import Questions from "@/data/questions.json";
 import { Choice } from "@/types/question";
 import { usePathname } from "next/navigation";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -35,7 +36,6 @@ export default function TestProvider({
 
   const summarizeAnswers = () => {
     const summary = {} as Record<string, number>;
-
     answers.forEach((answer) => {
       Object.entries(answer.weight).forEach(([key, value]) => {
         if (!summary[key]) {
@@ -46,7 +46,24 @@ export default function TestProvider({
       });
     });
 
-    return Object.entries(summary).sort((a, b) => b[1] - a[1]);
+    const totalWeights = {} as Record<string, number>;
+    Questions.forEach((question) => {
+      question.choices.forEach((choice) => {
+        Object.entries(choice.weight).forEach(([key, value]) => {
+          if (!totalWeights[key]) {
+            totalWeights[key] = 0;
+          }
+
+          totalWeights[key] += value as number;
+        });
+      });
+    });
+
+    const result = Object.entries(summary).map(([key, value]) => {
+      return [key, (value / totalWeights[key]) * 100] as [string, number];
+    });
+
+    return result.sort((a, b) => b[1] - a[1]);
   };
 
   useEffect(() => {
