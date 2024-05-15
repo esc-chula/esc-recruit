@@ -7,6 +7,7 @@ import Years from "@/data/years.json";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
+import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 
 export default function ResultPage({ params }: { params: { year: string } }) {
@@ -66,7 +67,12 @@ export default function ResultPage({ params }: { params: { year: string } }) {
                 return department ? department.name : "";
               })
               .slice(1, 4)
-              .join(", ")}
+              .map((name) => (
+                <React.Fragment key={name}>
+                  <span>{name}</span>
+                  <br />
+                </React.Fragment>
+              ))}
           </p>
         </div>
         <div className="grid space-y-4 pt-10 text-center">
