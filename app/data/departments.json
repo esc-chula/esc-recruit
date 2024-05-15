@@ -2,46 +2,67 @@
   {
     "id": "tech",
     "name": "เทคโนโลยี",
+    "description": "เฉพาะด้าน นักวิเคราะห์ เฟี้ยว",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "sec",
     "name": "เลขานุการ",
+    "description": "ละเอียด มีระเบียบ รอบคอบ",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "fin",
     "name": "การเงิน",
+    "description": "ช่างสังเกต วางแผน รอบคอบ",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "marcom",
     "name": "ประชาสัมพันธ์และการตลาด",
+    "description": "สร้างสรรค์ นักเสก นักวิเคราะห์",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "od",
     "name": "พัฒนาองค์กร",
+    "description": "เฮฮา สีสัน หาทำ",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ea",
     "name": "กิจการภายนอก",
+    "description": "พลังล้น พร้อมเรียนรู้ สัตว์สังคม",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
-    "id": "in",
+    "id": "in-in",
     "name": "กิจการภายใน",
+    "description": "ยืดหยุ่น พร้อมเรียนรู้ เปิดรับ",
+    "postUrl": "https://www.instagram.com/escchula/"
+  },
+  {
+    "id": "in-welfare",
+    "name": "สวัสดิการนิสิตและสิ่งแวดล้อม",
+    "description": "ผู้ฟังที่ดี รอบด้าน เสียสละ",
+    "postUrl": "https://www.instagram.com/escchula/"
+  },
+  {
+    "id": "in-csr",
+    "name": "พัฒนาสังคมและบำเพ็ญประโยชน์",
+    "description": "เสียสละ สายลุย สายถึก",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ns3k",
     "name": "นิสิตสัมพันธ์",
+    "description": "รักสังคม สร้างสรรค์ รอบด้าน",
     "postUrl": "https://www.instagram.com/escchula/"
   },
   {
     "id": "ac",
     "name": "วิชาการ",
+    "description": "ผู้รู้ ผู้ตื่น ผู้เบิกบาน",
     "postUrl": "https://www.instagram.com/escchula/"
   }
 ]

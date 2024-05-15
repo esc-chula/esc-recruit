@@ -38,7 +38,7 @@ export default function QuestionPage({
       {question.transitions?.map((transition, index) => (
         <Transition key={transition} index={index} title={transition} />
       ))}
-      <div className="flex h-full w-full flex-col items-center justify-center space-y-10 pb-20">
+      <div className="flex h-full w-full flex-col items-center justify-center space-y-10 py-6">
         <h1 className="text-center text-2xl font-bold">{question.question}</h1>
         <div className="flex w-full flex-col space-y-5">
           <Choices question={question} />

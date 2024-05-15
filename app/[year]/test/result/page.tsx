@@ -44,6 +44,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
         <div className="flex flex-col items-center space-y-1 text-center">
           <p className="text-lg">คุณเหมาะกับฝ่าย</p>
           <h1 className="text-4xl font-bold">{department.name}!</h1>
+          <p>“{department.description}”</p>
           <div className="pt-2">
             <Link
               href={department.postUrl}

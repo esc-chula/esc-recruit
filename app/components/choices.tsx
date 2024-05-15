@@ -15,7 +15,7 @@ export default function Choices({ question }: { question: Question }) {
     <>
       {question.choices.map((choice) => (
         <button
-          key={choice.id}
+          key={choice.title}
           onClick={() => {
             addAnswer(choice);
 
@@ -43,7 +43,7 @@ export default function Choices({ question }: { question: Question }) {
 
             router.push(`/${question.yearId}/test/${question.id + 1}`);
           }}
-          className="flex items-center justify-between rounded-xl bg-white p-4 font-semibold text-identity-carbon"
+          className="flex items-center justify-between rounded-xl bg-white p-4 text-left font-semibold text-identity-carbon"
         >
           <span>{choice.title}</span>
           <FiChevronRight size={24} />
