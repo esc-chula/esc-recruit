@@ -32,12 +32,14 @@ export default function YearPage({ params }: { params: { year: string } }) {
             <h1 className="font-bold leading-8">
               <span className="text-3xl">We’re Recruiting!</span>
               <br />
-              <span className="text-2xl">รับสมัครเพื่อนร่วมทีม กวศ.67</span>
+              <span className="text-2xl">
+                รับสมัครเพื่อนร่วมทีม กวศ.{year.id}
+              </span>
             </h1>
             <p className="text-sm">
-              ตั้งแต่วันนี้ - 22 พฤษภาคม 2567
+              ตั้งแต่{year.applicationDateRange}
               <br />
-              โดยจะมีการสัมภาษณ์ตั้งแต่วันที่ 27-31 พฤษภาคม 2567
+              โดยจะมีการสัมภาษณ์ตั้งแต่{year.interviewDateRange}
             </p>
           </div>
         </div>
