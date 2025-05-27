@@ -1,67 +1,61 @@
 [
   {
     "id": "tech",
-    "name": "เทคโนโลยี",
+    "name": "เทคโนโลยี (TECH)",
     "description": "เฉพาะด้าน นักวิเคราะห์ เฟี้ยว",
     "postUrl": "https://www.instagram.com/p/C6_wl1bJ2BD/"
   },
   {
     "id": "sec",
-    "name": "เลขานุการ",
+    "name": "เลขานุการ (SEC)",
     "description": "ละเอียด มีระเบียบ รอบคอบ",
     "postUrl": "https://www.instagram.com/p/C6_wVUlpcF9/"
   },
   {
     "id": "fin",
-    "name": "การเงิน",
+    "name": "การเงิน (FIN)",
     "description": "ช่างสังเกต วางแผน รอบคอบ",
     "postUrl": "https://www.instagram.com/p/C6_wFsWpH-X/"
   },
   {
     "id": "marcom",
-    "name": "ประชาสัมพันธ์และการตลาด",
+    "name": "ประชาสัมพันธ์และการตลาด (MARCOM)",
     "description": "สร้างสรรค์ นักเสก นักวิเคราะห์",
     "postUrl": "https://www.instagram.com/p/C6_w6L4Jh5F/"
   },
   {
     "id": "od",
-    "name": "พัฒนาองค์กร",
+    "name": "พัฒนาองค์กร (OD)",
     "description": "เฮฮา สีสัน หาทำ",
     "postUrl": "https://www.instagram.com/p/C6_x-rhpLdk/"
   },
   {
     "id": "ea",
-    "name": "กิจการภายนอก",
+    "name": "กิจการภายนอก (EA)",
     "description": "พลังล้น พร้อมเรียนรู้ สัตว์สังคม",
     "postUrl": "https://www.instagram.com/p/C6_xod1JE6Y/"
   },
   {
-    "id": "in-in",
-    "name": "กิจการภายใน",
+    "id": "in",
+    "name": "กิจการภายใน (IN)",
     "description": "ยืดหยุ่น พร้อมเรียนรู้ เปิดรับ",
     "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
   },
   {
-    "id": "in-welfare",
-    "name": "สวัสดิการนิสิตและสิ่งแวดล้อม",
-    "description": "ผู้ฟังที่ดี รอบด้าน เสียสละ",
-    "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
-  },
-  {
-    "id": "in-csr",
-    "name": "พัฒนาสังคมและบำเพ็ญประโยชน์",
+    "id": "csr",
+    "name": "พัฒนาสังคมและบำเพ็ญประโยชน์ (CSR)",
     "description": "เสียสละ สายลุย สายถึก",
     "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
   },
   {
     "id": "ns3k",
-    "name": "นิสิตสัมพันธ์",
+    "name": "นิสิตสัมพันธ์ (NS3K)",
     "description": "รักสังคม สร้างสรรค์ รอบด้าน",
     "postUrl": "https://www.instagram.com/p/C6_x16mJ86i/"
   },
   {
     "id": "ac",
-    "name": "วิชาการ",
+    "name": "วิชาการ (AC)",
     "description": "ผู้รู้ ผู้ตื่น ผู้เบิกบาน",
     "postUrl": "https://www.instagram.com/p/C6_xKlFJH9N/"
   }
