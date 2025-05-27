@@ -2,12 +2,17 @@
 
 import { useTest } from "@/contexts/test-context";
 import Departments from "@/data/departments.json";
-import Questions from "@/data/questions.json";
 import { Question } from "@/types/question";
 import { useRouter } from "next/navigation";
 import { FiChevronRight } from "react-icons/fi";
 
-export default function Choices({ question }: { question: Question }) {
+export default function Choices({
+  question,
+  isLastQuestion,
+}: {
+  question: Question;
+  isLastQuestion: boolean;
+}) {
   const router = useRouter();
   const { addAnswer, summarizeAnswers } = useTest();
 
@@ -19,7 +24,7 @@ export default function Choices({ question }: { question: Question }) {
           onClick={() => {
             addAnswer(choice);
 
-            if (question.id === Questions.length) {
+            if (isLastQuestion) {
               const result = summarizeAnswers();
               if (!result || result.length === 0) {
                 router.push("/");

@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return Questions.map((question) => ({
+    year: question.yearId.toString(),
     questionId: question.id.toString(),
   }));
 }
@@ -19,12 +20,22 @@ export default function QuestionPage({
   const year = Years.find((year) => year.id.toString() === params.year);
 
   const question = Questions.find(
-    (question) => question.id.toString() === params.questionId,
+    (question) =>
+      question.id.toString() === params.questionId &&
+      question.yearId.toString() === params.year
   );
 
   if (!year || !question || question.yearId.toString() !== params.year) {
     return notFound();
   }
+
+  const questionsOfYear = Questions.filter(
+    (q) => q.yearId.toString() === params.year
+  );
+
+  const isLastQuestion =
+    question.id ===
+    questionsOfYear.reduce((maxId, q) => (q.id > maxId ? q.id : maxId), 0);
 
   return (
     <>
@@ -41,7 +52,7 @@ export default function QuestionPage({
       <div className="flex h-full w-full flex-col items-center justify-center space-y-10 py-6">
         <h1 className="text-center text-2xl font-bold">{question.question}</h1>
         <div className="flex w-full flex-col space-y-5">
-          <Choices question={question} />
+          <Choices question={question} isLastQuestion={isLastQuestion} />
         </div>
       </div>
       <BottomRightLogo />
