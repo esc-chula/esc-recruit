@@ -4,6 +4,7 @@ import Transition from "@/components/transition";
 import Questions from "@/data/questions.json";
 import Years from "@/data/years.json";
 import { notFound } from "next/navigation";
+import BackButton from "@/components/back-button";
 
 export async function generateStaticParams() {
   return Questions.map((question) => ({
@@ -39,13 +40,14 @@ export default function QuestionPage({
 
   return (
     <>
-      {/* <BackButton
+      <BackButton
         href={
           question.id === 1
             ? `/${year.id}/test`
             : `/${year.id}/test/${question.id - 1}`
         }
-      /> */}
+      />
+
       {question.transitions?.map((transition, index) => (
         <Transition key={transition} index={index} title={transition} />
       ))}
