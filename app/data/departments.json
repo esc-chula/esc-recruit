@@ -2,25 +2,25 @@
   {
     "id": "tech",
     "name": "เทคโนโลยี (TECH)",
-    "description": "เฉพาะด้าน นักวิเคราะห์ เฟี้ยว",
+    "description": "ช่างคิด สร้างสรรค์ ล้ำสมัย",
     "postUrl": "https://www.instagram.com/p/C6_wl1bJ2BD/"
   },
   {
     "id": "sec",
     "name": "เลขานุการ (SEC)",
-    "description": "ละเอียด มีระเบียบ รอบคอบ",
+    "description": "เนี้ยบ มีระเบียบ รอบคอบ",
     "postUrl": "https://www.instagram.com/p/C6_wVUlpcF9/"
   },
   {
     "id": "fin",
     "name": "การเงิน (FIN)",
-    "description": "ช่างสังเกต วางแผน รอบคอบ",
+    "description": "ละเอียด รัดกุม รอบคอบ",
     "postUrl": "https://www.instagram.com/p/C6_wFsWpH-X/"
   },
   {
     "id": "marcom",
     "name": "ประชาสัมพันธ์และการตลาด (MARCOM)",
-    "description": "สร้างสรรค์ นักเสก นักวิเคราะห์",
+    "description": "สร้างสรรค์ สื่อสาร เล่าเรื่อง",
     "postUrl": "https://www.instagram.com/p/C6_w6L4Jh5F/"
   },
   {
@@ -32,19 +32,19 @@
   {
     "id": "ea",
     "name": "กิจการภายนอก (EA)",
-    "description": "พลังล้น พร้อมเรียนรู้ สัตว์สังคม",
+    "description": "พลังล้น เฟรนด์ลี่ สัตว์สังคม",
     "postUrl": "https://www.instagram.com/p/C6_xod1JE6Y/"
   },
   {
     "id": "in",
     "name": "กิจการภายใน (IN)",
-    "description": "ยืดหยุ่น พร้อมเรียนรู้ เปิดรับ",
+    "description": "อบอุ่น ยืดหยุ่น ใส่ใจ",
     "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
   },
   {
     "id": "csr",
     "name": "พัฒนาสังคมและบำเพ็ญประโยชน์ (CSR)",
-    "description": "เสียสละ สายลุย สายถึก",
+    "description": "เสียสละ สายลุย แบ่งปัน",
     "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
   },
   {
