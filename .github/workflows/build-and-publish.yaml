@@ -1,0 +1,101 @@
+name: CI - Build and Publish Docker Image
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: ghcr.io/esc-chula/esc-recruit/esc-recruit-app
+  ORG_NAME: esc-chula
+  PACKAGE_NAME: esc-recruit/esc-recruit-app
+
+jobs:
+  get-version:
+    name: Get New Version
+    runs-on: ubuntu-latest
+    permissions:
+      packages: read
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+
+    steps:
+      - name: Calculate new version
+        id: version
+        run: |
+          ENCODED_PACKAGE_NAME=$(echo "${{ env.PACKAGE_NAME }}" | sed 's/\//%2F/g')
+          API_URL="https://api.github.com/orgs/${{ env.ORG_NAME }}/packages/container/${ENCODED_PACKAGE_NAME}/versions"
+
+          echo "Fetching tags from ${API_URL}"
+
+          LATEST_TAG=$( \
+            curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+                 -H "Accept: application/vnd.github+json" \
+                 "${API_URL}" \
+            | jq -r '.[].name' \
+            | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' \
+            | sort -V \
+            | tail -n 1 \
+          )
+
+          if [[ -z "$LATEST_TAG" ]]; then
+            NEW_VERSION="1.0.0"
+            echo "No previous version found. Starting with ${NEW_VERSION}"
+          else
+            NEW_VERSION=$(echo "$LATEST_TAG" | awk -F. -v OFS=. '{$NF = $NF + 1;} 1')
+            echo "Latest version is ${LATEST_TAG}. New version will be ${NEW_VERSION}"
+          fi
+
+          echo "version=${NEW_VERSION}" >> $GITHUB_OUTPUT
+
+  build-and-push:
+    name: Build and Push Image
+    runs-on: ubuntu-latest
+    needs: get-version
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=${{ needs.get-version.outputs.version }}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  sign-image:
+    name: Sign Container Image
+    runs-on: ubuntu-latest
+    needs: [get-version, build-and-push]
+    permissions:
+      packages: write
+      id-token: write
+
+    steps:
+      - name: Install Cosign
+        uses: sigstore/cosign-installer@v3
+
+      - name: Sign the container image with Cosign
+        run: |
+          cosign sign --yes "${{ env.IMAGE_NAME }}:${{ needs.get-version.outputs.version }}"
