@@ -1,61 +1,77 @@
-# name: CI - Build and Push Docker Image
+name: CI - Build and Push Docker Image
 
-# on:
-#   workflow_dispatch:
-#   push:
-#     branches:
-#       - main
-#     tags:
-#       - 'v*'
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-#     permissions:
-#       contents: write
-#       packages: write
+    permissions:
+      contents: write
+      packages: write
 
-#     steps:
-#       - name: Set up Docker Buildx
-#         uses: docker/setup-buildx-action@v2
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-#       - name: Log in to the Container Registry
-#         uses: docker/login-action@v2
-#         with:
-#           registry: ghcr.io
-#           username: ${{ github.actor }}
-#           password: ${{ github.token }}
+      - name: Calculate Commit Count
+        id: commit_count
+        run: |
+          echo "COUNT=$(git rev-list --count HEAD)" >> "$GITHUB_OUTPUT"
 
-#       - name: Repository to lowercase
-#         env:
-#           REPOSITORY: ${{ github.repository }}
-#         run: |
-#           echo "IMAGE_NAME=ghcr.io/${REPOSITORY@L}" >> "$GITHUB_ENV"
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-#       - name: Gather tags name
-#         env:
-#           IMAGE_NAME: ${{ env.IMAGE_NAME }}
-#           SHA: ${{ github.sha }}
-#           REF: ${{ github.ref }}
-#         id: tags
-#         run: |
-#           RESULT="$IMAGE_NAME:latest,$IMAGE_NAME:$SHA"
+      - name: Log in to the Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
 
-#           case "$REF" in
-#           refs/tags/v*)
-#               RESULT="${RESULT},$IMAGE_NAME:${REF#refs/tags/v}"
-#           ;;
-#           esac
+      - name: Repository to lowercase and set IMAGE_NAME
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${REPOSITORY,,}" >> "$GITHUB_ENV"
 
-#           echo "tags = $RESULT"
-#           echo "tags=$RESULT" >> "$GITHUB_OUTPUT"
+      - name: Gather tags name
+        id: tags
+        env:
+          IMAGE_NAME: ${{ env.IMAGE_NAME }}
+          SHA_SHORT: ${{ github.sha }}
+          REF: ${{ github.ref }}
+          COMMIT_COUNT: ${{ steps.commit_count.outputs.COUNT }}
+        run: |
+          CUSTOM_VERSION_TAG="1.0.${COMMIT_COUNT}"
+          TAG_LIST="$IMAGE_NAME:$CUSTOM_VERSION_TAG"
+          if [[ "$REF" == "refs/heads/main" ]]; then
+            TAG_LIST="${TAG_LIST},$IMAGE_NAME:latest"
+          fi
+          TAG_LIST="${TAG_LIST},$IMAGE_NAME:$(echo $SHA_SHORT | cut -c1-7)"
+          case "$REF" in
+          refs/tags/v*)
+              GIT_TAG_VERSION="${REF#refs/tags/}" 
+              TAG_LIST="${TAG_LIST},$IMAGE_NAME:${GIT_TAG_VERSION}"
+          ;;
+          esac
+          echo "Generated tags: $TAG_LIST"
+          echo "tags=$TAG_LIST" >> "$GITHUB_OUTPUT"
 
-#       - name: Build and Push Docker Image
-#         uses: docker/build-push-action@v3
-#         with:
-#           file: Dockerfile
-#           push: true
-#           tags: ${{ steps.tags.outputs.tags }}
-#           cache-from: type=registry,ref=${{ env.IMAGE_NAME }}:buildcache
-#           cache-to: type=registry,ref=${{ env.IMAGE_NAME }}:buildcache,mode=max
+      - name: Build and Push Docker Image
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          file: Dockerfile
+          push: true
+          tags: ${{ steps.tags.outputs.tags }}
+          cache-from: type=registry,ref=${{ env.IMAGE_NAME }}:buildcache
+          cache-to: type=registry,ref=${{ env.IMAGE_NAME }}:buildcache,mode=max
