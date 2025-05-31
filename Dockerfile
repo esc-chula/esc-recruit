@@ -1,4 +1,4 @@
-# base
+# Stage 1: Base
 FROM oven/bun:1 as base
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY . .
 
 RUN bun run build
 
-# prod
+# Stage 2: Production
 FROM oven/bun:1 as prod
 WORKDIR /app
 
