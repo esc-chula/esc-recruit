@@ -47,7 +47,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
           <h1 className="text-4xl font-bold">{department.name}!</h1>
           <p>“{department.description}”</p>
           <div className="pt-2">
-            <Link
+            {/* <Link
               href={department.postUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -55,7 +55,7 @@ export default function ResultPage({ params }: { params: { year: string } }) {
             >
               <span>ข้อมูลเพิ่มเติม</span>
               <FiArrowUpRight />
-            </Link>
+            </Link>` */}
           </div>
         </div>
         <div className="text-center">
