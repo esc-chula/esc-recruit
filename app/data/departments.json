@@ -3,60 +3,60 @@
     "id": "tech",
     "name": "เทคโนโลยี (TECH)",
     "description": "ช่างคิด สร้างสรรค์ ล้ำสมัย",
-    "postUrl": "https://www.instagram.com/p/C6_wl1bJ2BD/"
+    "postUrl": "https://www.instagram.com/p/DKY-IaPy9jB/"
   },
   {
     "id": "sec",
     "name": "เลขานุการ (SEC)",
     "description": "เนี้ยบ มีระเบียบ รอบคอบ",
-    "postUrl": "https://www.instagram.com/p/C6_wVUlpcF9/"
+    "postUrl": "https://www.instagram.com/p/DKY9-4gyze8/"
   },
   {
     "id": "fin",
     "name": "การเงิน (FIN)",
     "description": "ละเอียด รัดกุม รอบคอบ",
-    "postUrl": "https://www.instagram.com/p/C6_wFsWpH-X/"
+    "postUrl": "https://www.instagram.com/p/DKY95k3y3yW/"
   },
   {
     "id": "marcom",
     "name": "ประชาสัมพันธ์และการตลาด (MARCOM)",
     "description": "สร้างสรรค์ สื่อสาร เล่าเรื่อง",
-    "postUrl": "https://www.instagram.com/p/C6_w6L4Jh5F/"
+    "postUrl": "https://www.instagram.com/p/DKY_MO2SsiK/"
   },
   {
     "id": "od",
     "name": "พัฒนาองค์กร (OD)",
     "description": "เฮฮา สีสัน หาทำ",
-    "postUrl": "https://www.instagram.com/p/C6_x-rhpLdk/"
+    "postUrl": "https://www.instagram.com/p/DKY929PSB1W/"
   },
   {
     "id": "ea",
     "name": "กิจการภายนอก (EA)",
     "description": "พลังล้น เฟรนด์ลี่ สัตว์สังคม",
-    "postUrl": "https://www.instagram.com/p/C6_xod1JE6Y/"
+    "postUrl": "https://www.instagram.com/p/DKZAjVby-7u/"
   },
   {
     "id": "in",
     "name": "กิจการภายใน (IN)",
     "description": "อบอุ่น ยืดหยุ่น ใส่ใจ",
-    "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
+    "postUrl": "https://www.instagram.com/p/DKZAgWAyooD/"
   },
   {
     "id": "csr",
     "name": "พัฒนาสังคมและบำเพ็ญประโยชน์ (CSR)",
     "description": "เสียสละ สายลุย แบ่งปัน",
-    "postUrl": "https://www.instagram.com/p/C6_xWwBJdom/"
+    "postUrl": "https://www.instagram.com/p/DKZAoorS9UD/"
   },
   {
     "id": "ns3k",
-    "name": "นิสิตสัมพันธ์ (NS3K)",
+    "name": "นิสิตสัมพันธ์ (NSSP)",
     "description": "รักสังคม สร้างสรรค์ รอบด้าน",
-    "postUrl": "https://www.instagram.com/p/C6_x16mJ86i/"
+    "postUrl": "https://www.instagram.com/p/DKZAk5fy0AT/"
   },
   {
     "id": "ac",
     "name": "วิชาการ (AC)",
     "description": "ผู้รู้ ผู้ตื่น ผู้เบิกบาน",
-    "postUrl": "https://www.instagram.com/p/C6_xKlFJH9N/"
+    "postUrl": "https://www.instagram.com/p/DKZAdvYykOv/"
   }
 ]
