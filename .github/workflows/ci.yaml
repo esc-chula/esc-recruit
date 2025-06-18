@@ -81,5 +81,3 @@ jobs:
           file: Dockerfile
           push: true
           tags: ${{ needs.pre_checks.outputs.tags }}
-          cache-from: type=registry,ref=${{ needs.pre_checks.outputs.image_name }}:buildcache
-          cache-to: type=registry,ref=${{ needs.pre_checks.outputs.image_name }}:buildcache,mode=max
