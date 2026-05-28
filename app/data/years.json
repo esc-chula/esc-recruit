@@ -14,5 +14,13 @@
     "applicationDateRange": "วันนี้ - 8 มิถุนายน 2568",
     "interviewDateRange": "วันที่ 13-18 มิถุนายน 2568",
     "active": true
+  },
+  {
+    "id": 69,
+    "name": "2569",
+    "formUrl": "https://form.jotform.com/261431707861053",
+    "applicationDateRange": "วันนี้ - 1 มิถุนายน 2569",
+    "interviewDateRange": "วันที่ 4-8 มิถุนายน 2569",
+    "active": true
   }
 ]

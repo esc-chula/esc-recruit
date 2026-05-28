@@ -2,61 +2,73 @@
   {
     "id": "tech",
     "name": "เทคโนโลยี (TECH)",
-    "description": "ช่างคิด สร้างสรรค์ ล้ำสมัย",
-    "postUrl": "https://www.instagram.com/p/DKY-IaPy9jB/"
+    "description": "If it works, don’t touch it.",
+    "postUrl": "https://www.instagram.com/p/DY1gqxzkjnW/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
   },
   {
     "id": "sec",
     "name": "เลขานุการ (SEC)",
-    "description": "เนี้ยบ มีระเบียบ รอบคอบ",
-    "postUrl": "https://www.instagram.com/p/DKY9-4gyze8/"
+    "description": "Secret(ary) needs you (& your secret🤫)",
+    "postUrl": "https://www.instagram.com/p/DY1dCR1ki14/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "fin",
     "name": "การเงิน (FIN)",
-    "description": "ละเอียด รัดกุม รอบคอบ",
-    "postUrl": "https://www.instagram.com/p/DKY95k3y3yW/"
+    "description": "การเงินโปร่งใส ใส่ใจทุกโครงการ",
+    "postUrl": "https://www.instagram.com/p/DY1dVq4EmAt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "marcom",
     "name": "ประชาสัมพันธ์และการตลาด (MARCOM)",
-    "description": "สร้างสรรค์ สื่อสาร เล่าเรื่อง",
-    "postUrl": "https://www.instagram.com/p/DKY_MO2SsiK/"
+    "description": "ไม่ใช่แค่ฟันเฟืองเบื้องหลัง แต่เป็นกระบอกเสียงหลักของชาววิศวะฯ",
+    "postUrl": "https://www.instagram.com/p/DY1gw5ekvVu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "od",
     "name": "พัฒนาองค์กร (OD)",
-    "description": "เฮฮา สีสัน หาทำ",
-    "postUrl": "https://www.instagram.com/p/DKY929PSB1W/"
+    "description": "เบื้องหลังองค์กรที่แข็งแรง คือ OD ที่แข็งแกร่ง",
+    "postUrl": "https://www.instagram.com/p/DY1gsBVErsG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "ea",
     "name": "กิจการภายนอก (EA)",
-    "description": "พลังล้น เฟรนด์ลี่ สัตว์สังคม",
-    "postUrl": "https://www.instagram.com/p/DKZAjVby-7u/"
+    "description": "มาร่วมวางสะพานเชื่อมวิศวะสู่ภายนอกไปด้วยกัน",
+    "postUrl": "https://www.instagram.com/p/DY1iIIZEtru/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "in",
     "name": "กิจการภายใน (IN)",
-    "description": "อบอุ่น ยืดหยุ่น ใส่ใจ",
-    "postUrl": "https://www.instagram.com/p/DKZAgWAyooD/"
+    "description": "ประสานเรื่องภายใน ใส่ใจทุกกิจกรรม",
+    "postUrl": "https://www.instagram.com/p/DY1d3lJEpj-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "csr",
     "name": "พัฒนาสังคมและบำเพ็ญประโยชน์ (CSR)",
-    "description": "เสียสละ สายลุย แบ่งปัน",
-    "postUrl": "https://www.instagram.com/p/DKZAoorS9UD/"
+    "description": "Engineering for society",
+    "postUrl": "https://www.instagram.com/p/DY2P5s9En8N/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "ns3k",
     "name": "นิสิตสัมพันธ์ (NSSP)",
-    "description": "รักสังคม สร้างสรรค์ รอบด้าน",
-    "postUrl": "https://www.instagram.com/p/DKZAk5fy0AT/"
+    "description": "มาร่วมสานสัมพันธ์ และสร้างความทรงจำในคณะไปด้วยกัน",
+    "postUrl": "https://www.instagram.com/p/DY1gD-kEnoj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   },
   {
     "id": "ac",
     "name": "วิชาการ (AC)",
-    "description": "ผู้รู้ ผู้ตื่น ผู้เบิกบาน",
-    "postUrl": "https://www.instagram.com/p/DKZAdvYykOv/"
+    "description": "Let’s design the future for better tomorrows.",
+    "postUrl": "https://www.instagram.com/p/DY1hBgPksWL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "id": "sustain",
+    "name": "ความยั่งยืน (SUSTAIN)",
+    "description": "We were born COOL😎, but Climate Change(s) us HOT!!!🔥",
+    "postUrl": "https://www.instagram.com/p/DY1eeOckoZJ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "id": "os",
+    "name": "สนับสนุน (OS)",
+    "description": "Supporting every step, making it all possible.",
+    "postUrl": "https://www.instagram.com/p/DY1jaqCEkxN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
   }
 ]
