@@ -5,7 +5,7 @@
     "formUrl": "https://forms.gle/FcM2Eh6eLpmCQqbv7",
     "applicationDateRange": "วันนี้ - 8 พฤศจิกายน 2567",
     "interviewDateRange": "วันที่ 13-15 พฤศจิกายน 2567",
-    "active": true
+    "active": false
   },
   {
     "id": 68,
@@ -13,7 +13,7 @@
     "formUrl": "https://forms.gle/krGcyqjjJjG1g2MLA",
     "applicationDateRange": "วันนี้ - 8 มิถุนายน 2568",
     "interviewDateRange": "วันที่ 13-18 มิถุนายน 2568",
-    "active": true
+    "active": false
   },
   {
     "id": 69,
