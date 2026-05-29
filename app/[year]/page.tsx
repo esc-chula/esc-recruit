@@ -56,7 +56,7 @@ export default function YearPage({ params }: { params: { year: string } }) {
             href={`/${year.id}/test`}
             className="rounded-xl border-2 border-identity-cloud px-4 py-2 text-sm font-medium"
           >
-            เราเหมาะกับฝ่ายไหนใน กวศ. กันนะ?
+            เราเหมาะกับฝ่ายไหนใน กวศ.{year.id} กันนะ?
           </Link>
         </div>
       </div>
