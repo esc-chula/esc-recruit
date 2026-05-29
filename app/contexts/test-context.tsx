@@ -47,7 +47,9 @@ export default function TestProvider({
     });
 
     const totalWeights = {} as Record<string, number>;
-    Questions.forEach((question) => {
+    Questions.filter(
+      (q) => q.yearId === parseInt(pathname.split("/")[1]),
+    ).forEach((question) => {
       question.choices.forEach((choice) => {
         Object.entries(choice.weight).forEach(([key, value]) => {
           if (!totalWeights[key]) {
